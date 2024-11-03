@@ -9,6 +9,7 @@ class UserProfile(models.Model):
     subjects = models.CharField(max_length=255)
     study_time_preference = models.CharField(max_length=255)
     learning_style = models.CharField(max_length=255)
+    total_study_time = models.IntegerField(default=0)
 
     def __str__(self):
         return self.user.username
