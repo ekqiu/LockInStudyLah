@@ -2,7 +2,7 @@
 Ever feel like you lack the motivation and peer pressure to study?
 Ever feel like you gotta LOCK IN?
 
-Having your friend tell you 'Lock in and study!' might not be enough, so let our collaborative studying platform plan your study sessions.
+Having your friend tell you 'Lock in and study!' might not be enough, so let our collaborative studying platform make sure you study.
 
 # Features
 This platform provide you a place to find like-minded students like yourself and form study groups, based on AI-powered Matching Algorithm to match you with others that have similar goals, similar study times and similar styles of learning.
