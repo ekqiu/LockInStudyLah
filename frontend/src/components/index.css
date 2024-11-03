@@ -1,0 +1,120 @@
+/* src/index.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #343a40;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+.container {
+    max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    
+}
+
+.centre {display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;}
+
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 10px 20px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 10px 20px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+option {
+    padding: 10px;
+}
+
+.fastAccess {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px 20px 10px;
+    padding: 20px;
+    background-color: #007bff;; 
+    width: 10vh;
+    text-align: center;
+    border-radius: 24px;
+}
+
+.fastAccess a {
+    color: white;
+    text-decoration: none;
+}
+
+.fastAccess a:hover {
+    color: #0056b3;
+}
+
+.row {
+    display: flex;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 10px 20px 10px;
+    padding: 20px;
+    background-color: #007bff;; 
+    width: 100%;
+    flex-direction: column;
+    border-radius: 24px;
+}
+
+.heading {
+    color: white;
+    font-size: large;
+    font-weight: bold;
+}
+
+.data {
+    color: white;
+    font-size:xx-large;
+}

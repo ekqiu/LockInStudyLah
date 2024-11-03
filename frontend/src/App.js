@@ -1,29 +1,28 @@
-import React, { useEffect, useState } from "react";
-import { getUserProfiles } from "./api";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Register from "./components/register.js";
+import Login from "./components/login.js";
+import Profile from "./components/profile.js";
+import MainPage from "./components/mainPage.js";
+import ProtectedRoute from "./components/protectedRoute.js";
+import { AuthProvider } from "./context/authcontext.js";
+import Home from "./components/home.js";
+import Navbar from "./components/navbar.js";
+import Study from "./components/study.js";
 
 function App() {
-  const [profiles, setProfiles] = useState([]);
-
-  useEffect(() => {
-    getUserProfiles()
-      .then((response) => {
-        console.log("API response:", response); // Add this line for debugging
-        setProfiles(response.data);
-      })
-      .catch((error) => {
-        console.error("API call failed:", error); // Add this line for debugging
-      });
-  }, []);
-
   return (
-    <div>
-      <h1>User Profiles</h1>
-      <ul>
-        {profiles.map((profile) => (
-          <li key={profile.id}>{profile.user}</li>
-        ))}
-      </ul>
-    </div>
+    <AuthProvider>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/profile" element={<ProtectedRoute element={Profile} />} />
+        <Route path="/main" element={<ProtectedRoute element={MainPage} />} />
+        <Route path="/study" element={<ProtectedRoute element={Study} />} />
+      </Routes>
+    </AuthProvider>
   );
 }
 
