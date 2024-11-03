@@ -31,6 +31,9 @@ const MainPage = () => {
         <div className="fastAccess">
           <Link to="/study">Start Study Session</Link>
         </div>
+        <div className="fastAccess">
+          <Link to="/chat">View Chats</Link>
+        </div>
       </div>
       <Recommendations userId={user.user.id} />
     </div>

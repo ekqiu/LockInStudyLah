@@ -6,14 +6,17 @@ import config from "../config";
 const StudyStats = () => {
   const { user } = useContext(AuthContext);
   const [totalMinutes, setTotalMinutes] = useState(0);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchTotalMinutes = async () => {
       try {
         const response = await axios.get(`${config.apiUrl}/user/`);
         setTotalMinutes(response.data.total_study_time);
+        setLoading(false);
       } catch (error) {
         console.error("Failed to fetch total study time", error);
+        setLoading(false);
       }
     };
 
@@ -21,6 +24,9 @@ const StudyStats = () => {
       fetchTotalMinutes();
     }
   }, [user]);
+  if (loading) {
+    return <p>Loading stats...</p>;
+  }
 
   return (
     <div>

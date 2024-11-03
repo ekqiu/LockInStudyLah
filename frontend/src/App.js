@@ -9,6 +9,7 @@ import { AuthProvider } from "./context/authcontext.js";
 import Home from "./components/home.js";
 import Navbar from "./components/navbar.js";
 import Study from "./components/study.js";
+import Chat from "./components/chat.js";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/profile" element={<ProtectedRoute element={Profile} />} />
         <Route path="/main" element={<ProtectedRoute element={MainPage} />} />
         <Route path="/study" element={<ProtectedRoute element={Study} />} />
+        <Route path="/chat" element={<ProtectedRoute element={Chat} />} />
       </Routes>
     </AuthProvider>
   );

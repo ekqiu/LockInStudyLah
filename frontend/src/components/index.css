@@ -118,3 +118,9 @@ option {
     color: white;
     font-size:xx-large;
 }
+
+img {
+    width: 50%;
+    max-width: 20vh;
+    height: auto;
+}
