@@ -130,7 +130,7 @@ def recommend_users(request):
             data["learning_style"].append(profile.learning_style)
 
         df = pd.DataFrame(data)
-        print("DataFrame created:\n", df)  # Debugging statement
+        print("DataFrasme created:\n", df)  # Debugging statement
 
         # Check if the DataFrame is empty
         if df.empty:
