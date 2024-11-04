@@ -32,7 +32,10 @@ const MainPage = () => {
           <Link to="/study">Start Study Session</Link>
         </div>
         <div className="fastAccess">
-          <Link to="/chat">View Chats</Link>
+          <Link to="/chat">Enter Public Chat</Link>
+        </div>
+        <div className="fastAccess">
+          <Link to="/pm">View Private Messages</Link>
         </div>
       </div>
       <Recommendations userId={user.user.id} />
